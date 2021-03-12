@@ -146,5 +146,8 @@
       }
     }
   },
-  "defaultProject": "socketSample"
+  "defaultProject": "socketSample",
+  "cli": {
+    "analytics": false
+  }
 }
