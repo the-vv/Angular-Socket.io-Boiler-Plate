@@ -9,8 +9,7 @@ import { WebsocketService } from './websocket.service';
 export class AppComponent implements OnInit {
 
   constructor(public webSocket: WebsocketService) {
-    webSocket
-      .listen('newMessage').subscribe(d => {
+    webSocket.listen('newMessage').subscribe(d => {
         this.messages.push(String(d));
       });
   }
@@ -20,7 +19,7 @@ export class AppComponent implements OnInit {
 
   sendMessage() {
     this.webSocket.emit('message', this.message)
-    this.message = ''   
+    this.message = ''
   }
 
   message: string;

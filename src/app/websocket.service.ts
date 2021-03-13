@@ -11,8 +11,6 @@ export class WebsocketService {
   uri: string = 'http://localhost:3000';
 
   constructor() {
-    console.log();
-    
     this.socket = io(this.uri);
   }
 
